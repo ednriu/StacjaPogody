@@ -7,4 +7,5 @@ module stacjaPogody {
     opens stacjaPogody;
     opens stacjaPogody.View;
     opens stacjaPogody.Controller;
+    opens stacjaPogody.Model;
 }

@@ -5,6 +5,7 @@ package stacjaPogody;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import stacjaPogody.View.ViewFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +16,12 @@ public class Launcher extends Application {
         launch(args);
     }
 
+    private WeatherManager weatherManager = new WeatherManager();;
 
     @Override
     public void start(Stage stage) throws Exception {
         stage.show();
+        ViewFactory viewFactory = new ViewFactory(weatherManager);
         
     }
 
