@@ -1,17 +1,22 @@
 package stacjaPogody.Controller;
 
-import java.awt.Button;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import stacjaPogody.WeatherManager;
 import stacjaPogody.View.ViewFactory;
 
-public class SelectCitiesController extends BaseController {
+public class SelectCitiesController extends BaseController implements Initializable{
 
-	public SelectCitiesController(ViewFactory viewFactory, String fxmlName) {
-		super(viewFactory, fxmlName);
+	public SelectCitiesController(ViewFactory viewFactory, WeatherManager weatherManager, String fxmlName) {
+		super(viewFactory, weatherManager, fxmlName);
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -28,23 +33,29 @@ public class SelectCitiesController extends BaseController {
 	    private Button AnulujButton;
 
 	    @FXML
-	    void AnulujButton(ActionEvent event) {
+	    void AnulujButton() {
 
 	    }
 
 	    @FXML
-	    void WybierzButton(ActionEvent event) {
+	    void WybierzButton() {
 
 	    }
 
 	    @FXML
-	    void WyjazdDoDrag(MouseEvent event) {
+	    void WyjazdDoDrag() {
 
 	    }
 
 	    @FXML
-	    void WyjazdZDrag(MouseEvent event) {
+	    void WyjazdZDrag() {
 
 	    }
+
+		@Override
+		public void initialize(URL arg0, ResourceBundle arg1) {
+			// TODO Auto-generated method stub
+			
+		}
 
 }

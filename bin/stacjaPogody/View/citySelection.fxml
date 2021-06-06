@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="244.0" prefWidth="283.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="244.0" prefWidth="283.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="WybierzButton" layoutX="26.0" layoutY="195.0" mnemonicParsing="false" onAction="#WybierzButton" text="Wybierz" />
       <ChoiceBox fx:id="WyjazdZLista" layoutX="107.0" layoutY="76.0" onDragDetected="#WyjazdZDrag" prefWidth="150.0" />

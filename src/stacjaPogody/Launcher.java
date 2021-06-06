@@ -20,8 +20,9 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.show();
+        //stage.show();
         ViewFactory viewFactory = new ViewFactory(weatherManager);
+        viewFactory.showCitySelectionWindow();
         
     }
 
