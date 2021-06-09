@@ -25,6 +25,11 @@ public class ViewFactory {
         BaseController controller = new SelectCitiesController(this, weatherManager, "citySelection.fxml");
         initializeStage(controller);
     }
+    
+    public void showWeatherDataWindow(){
+        BaseController controller = new SelectCitiesController(this, weatherManager, "weatherData.fxml");
+        initializeStage(controller);
+    }
 
     private void initializeStage(BaseController baseController){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(baseController.getFxmlName()));

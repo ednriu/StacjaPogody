@@ -1,8 +1,6 @@
 package stacjaPogody.Controller;
 
 
-import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -39,7 +37,7 @@ public class SelectCitiesController extends BaseController implements Initializa
 
 	    @FXML
 	    void WybierzButton() {
-
+	    	viewFactory.showWeatherDataWindow();
 	    }
 
 	    @FXML
