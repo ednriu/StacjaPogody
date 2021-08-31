@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import stacjaPogody.Controller.BaseController;
 import stacjaPogody.Controller.SelectCitiesController;
+import stacjaPogody.Controller.WeatherDataController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -27,7 +28,7 @@ public class ViewFactory {
     }
     
     public void showWeatherDataWindow(){
-        BaseController controller = new SelectCitiesController(this, weatherManager, "weatherData.fxml");
+        BaseController controller = new WeatherDataController(this, weatherManager, "weatherData.fxml");
         initializeStage(controller);
     }
 

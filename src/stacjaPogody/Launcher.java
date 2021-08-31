@@ -22,7 +22,7 @@ public class Launcher extends Application {
     public void start(Stage stage) throws Exception {
         //stage.show();
         ViewFactory viewFactory = new ViewFactory(weatherManager);
-        viewFactory.showWeatherDataWindow();
+        viewFactory.showCitySelectionWindow();
         
     }
 

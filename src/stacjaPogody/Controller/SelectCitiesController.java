@@ -2,13 +2,19 @@ package stacjaPogody.Controller;
 
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.stage.Stage;
 import stacjaPogody.WeatherManager;
+import stacjaPogody.Model.City;
 import stacjaPogody.View.ViewFactory;
 
 public class SelectCitiesController extends BaseController implements Initializable{
@@ -18,26 +24,30 @@ public class SelectCitiesController extends BaseController implements Initializa
 		// TODO Auto-generated constructor stub
 	}
 	
-	  @FXML
+	  	@FXML
 	    private Button WybierzButton;
 
 	    @FXML
-	    private ChoiceBox<?> WyjazdZLista;
+	    private ChoiceBox<String> WyjazdZLista;
 
 	    @FXML
-	    private ChoiceBox<?> WyjazdDoLista;
+	    private ChoiceBox<String> WyjazdDoLista;
 
 	    @FXML
 	    private Button AnulujButton;
 
 	    @FXML
-	    void AnulujButton() {
-
+	    void AnulujButtonAction() {
+	    	viewFactory.showWeatherDataWindow();
+	    	Stage stage = (Stage) WybierzButton.getScene().getWindow();
+	    	viewFactory.closeStage(stage);
 	    }
 
 	    @FXML
-	    void WybierzButton() {
+	    void WybierzButtonAction() {
 	    	viewFactory.showWeatherDataWindow();
+	    	Stage stage = (Stage) WybierzButton.getScene().getWindow();
+            viewFactory.closeStage(stage);
 	    }
 
 	    @FXML
@@ -46,13 +56,16 @@ public class SelectCitiesController extends BaseController implements Initializa
 	    }
 
 	    @FXML
-	    void WyjazdZDrag() {
+	    void WyjazdZMouseClicked() {
+			WyjazdZLista.setItems(weatherManager.getCities());
+	    	System.out.println("Klikam");
 
 	    }
 
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
 			// TODO Auto-generated method stub
+
 			
 		}
 
